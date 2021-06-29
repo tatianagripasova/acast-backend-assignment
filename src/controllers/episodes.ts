@@ -5,6 +5,9 @@ import { calculateChecksum } from '../util/checksum';
 
 let parser = new Parser();
 
+/**
+ * Fetches episodes and calculates checksum for each episode.
+ */
 export const getEpisodes = async(req: Request, res: Response, next: NextFunction) => {
   try {
     let podcasts = await parser.parseURL('https://rss.acast.com/varvet');
@@ -12,7 +15,7 @@ export const getEpisodes = async(req: Request, res: Response, next: NextFunction
       next(new Error('No podcasts.'))
     } else {
       let result = [];
-      for(let i = 0; i < 1/*podcasts.items.length*/; i++) {
+      for(let i = 0; i < podcasts.items.length; i++) {
         const item = podcasts.items[i];
         const title = item.title;
         const url = item.enclosure!.url;

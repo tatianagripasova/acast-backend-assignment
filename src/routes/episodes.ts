@@ -3,6 +3,6 @@ import { getEpisodes } from '../controllers/episodes';
 
 const router = express.Router();
 
-router.get('/episode', getEpisodes);
+router.get('/episodes', getEpisodes);
 
 export default router;
