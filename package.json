@@ -1,0 +1,25 @@
+{
+  "name": "acast-backend-task",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/download": "^8.0.0",
+    "download": "^8.0.0",
+    "express": "^4.17.1",
+    "md5-file": "^5.0.0",
+    "rss-parser": "^3.12.0"
+  },
+  "scripts": {
+    "start": "nodemon src/app.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.5",
+    "@types/xml2js": "^0.4.8",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  }
+}
